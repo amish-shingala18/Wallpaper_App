@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/rvWallpaper"
+         android:layout_width="0dp"
+         android:layout_height="0dp"
+         android:layout_marginStart="10dp"
+         android:layout_marginTop="5dp"
+         android:layout_marginEnd="10dp"
+         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.0"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/svWallpaper"
+         app:layout_constraintVertical_bias="1.0"
+         app:spanCount="3" />
+
+     <SearchView
+         android:id="@+id/svWallpaper"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="15dp"
+         android:layout_marginTop="10dp"
+         android:layout_marginEnd="15dp"
+         android:background="@drawable/searchbar"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+     <TextView
+         android:id="@+id/txtNoResult"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="No Results Found"
+         android:textSize="18sp"
+         style="@style/IconTheme"
+         android:visibility="gone"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/svWallpaper" />
+
+     <ImageView
+         android:id="@+id/imgNoNet"
+         android:layout_width="120dp"
+         android:layout_height="120dp"
+         android:layout_marginTop="10dp"
+         android:layout_marginBottom="100dp"
+         android:visibility="gone"
+         style="@style/IconTheme"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         app:srcCompat="@drawable/no_wifi" />
+
+     <TextView
+         android:id="@+id/txtNoNet"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="5dp"
+         android:text="No Interent Connection"
+         android:textSize="16sp"
+         android:textStyle="bold"
+         android:visibility="gone"
+         style="@style/IconTheme"
+         app:layout_constraintEnd_toEndOf="@+id/imgNoNet"
+         app:layout_constraintStart_toStartOf="@+id/imgNoNet"
+         app:layout_constraintTop_toBottomOf="@+id/imgNoNet" />
+
+     <TextView
+         android:id="@+id/txtNoNet2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="5dp"
+         android:text="Please check you connection and try again later"
+         android:visibility="gone"
+         style="@style/IconTheme"
+         app:layout_constraintEnd_toEndOf="@+id/txtNoNet"
+         app:layout_constraintStart_toStartOf="@+id/txtNoNet"
+         app:layout_constraintTop_toBottomOf="@+id/txtNoNet" />
+
+     <TextView
+         android:id="@+id/textView"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:paddingTop="10dp"
+         android:paddingBottom="10dp"
+         android:text="HD Wallpapers"
+         android:textSize="16sp"
+         android:textStyle="bold"
+         style="@style/IconTheme"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
